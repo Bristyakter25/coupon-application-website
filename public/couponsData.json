@@ -1,0 +1,591 @@
+[
+    {
+      "_id": "1",
+      "brand_name": "ShopEase",
+      "rating": 4.5,
+      "description": "Best deals on electronics and gadgets.",
+      "brand_logo": "https://i.ibb.co.com/smGLv9v/shopease.jpg",
+      "coupons": [
+        {
+          "coupon_code": "EASY20",
+          "discount": "20% off on all electronics",
+          "expiry_date": "2024-12-31",
+          "condition": "Minimum purchase of $100",
+          "coupon_type": "percentage"
+        }
+        
+      ],
+      "shop_link": "https://shopease.pk/",
+      "category": "Electronics",
+      "isSaleOn": true
+    },
+    {
+      "_id": "2",
+      "brand_name": "GlamStore",
+      "rating": 4.3,
+      "description": "Fashion and accessories at great prices.",
+      "brand_logo": "https://i.ibb.co.com/4d4MSbf/Glam-Store.jpg",
+      "coupons": [
+        {
+          "coupon_code": "GLAM10",
+          "discount": "10% off on all apparel",
+          "expiry_date": "2024-11-30",
+          "condition": "No minimum purchase required",
+          "coupon_type": "percentage"
+        }
+        
+      ],
+      "shop_link": "https://www.glamstore.com/?srsltid=AfmBOorwR6iC6PT4aljN2LdkAZnPGnabX6-ONVkfnMWvkYKXh_z7j2-K",
+      "category": "Fashion",
+      "isSaleOn": false
+    },
+    {
+        "_id": "3",
+        "brand_name": "StyleHaven",
+        "rating": 4.5,
+        "description": "Exclusive styles for every occasion.",
+        "brand_logo": "https://i.ibb.co.com/RD68GyG/style-heaven.jpg",
+        "coupons": [
+          {
+            "coupon_code": "STYLE20",
+            "discount": "20% off on orders above $50",
+            "expiry_date": "2024-12-15",
+            "condition": "Minimum order value $50",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://stylehaven1.com/",
+        "category": "Fashion",
+        "isSaleOn": true
+      },
+      {
+        "_id": "4",
+        "brand_name": "UrbanWear",
+        "rating": 4.2,
+        "description": "Trendy urban clothing at affordable prices.",
+        "brand_logo": "https://i.ibb.co.com/PN19Pdk/Urban-wear.jpg",
+        "coupons": [
+          {
+            "coupon_code": "URBAN15",
+            "discount": "15% off on your first order",
+            "expiry_date": "2024-12-31",
+            "condition": "Applicable for first-time users only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.urbanwearonline.com.au/?srsltid=AfmBOorPpKEZ0WFwuW_ue9tEw8kPLarhCC-oftu7P4xNHzOHdxlCk44b",
+        "category": "Fashion",
+        "isSaleOn": false
+      },
+      
+      {
+        "_id": "5",
+        "brand_name": "ChicCloset",
+        "rating": 4.7,
+        "description": "Modern designs with timeless elegance.",
+        "brand_logo": "https://i.ibb.co.com/gJ07x43/Chic-Closet.jpg",
+        "coupons": [
+          {
+            "coupon_code": "CHICFREE",
+            "discount": "Free shipping on all orders",
+            "expiry_date": "2025-01-31",
+            "condition": "No minimum order required",
+            "coupon_type": "free_shipping"
+          }
+        ],
+        "shop_link": "https://chiccloset.pk/",
+        "category": "Fashion",
+        "isSaleOn": true
+      },
+      
+      {
+        "_id": "6",
+        "brand_name": "GlamEssence",
+        "rating": 4.4,
+        "description": "Affordable glamour for your wardrobe.",
+        "brand_logo": "https://i.ibb.co.com/gRkvWm4/glam-essence.jpg",
+        "coupons": [
+          {
+            "coupon_code": "GLAM25",
+            "discount": "25% off on all accessories",
+            "expiry_date": "2025-02-15",
+            "condition": "Valid on accessories only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://glamessence.org/",
+        "category": "Fashion",
+        "isSaleOn": false
+      },
+      
+      {
+        "_id": "7",
+        "brand_name": "VogueLane",
+        "rating": 4.6,
+        "description": "Runway-inspired outfits for everyday wear.",
+        "brand_logo": "https://i.ibb.co.com/k6H4KMX/vogue-Lane.jpg",
+        "coupons": [
+          {
+            "coupon_code": "VOGUE30",
+            "discount": "30% off on selected items",
+            "expiry_date": "2024-12-25",
+            "condition": "Applicable to sale items only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://voguelane.in/",
+        "category": "Fashion",
+        "isSaleOn": true
+      },
+      {
+        "_id": "8",
+        "brand_name": "TrendSetters",
+        "rating": 4.8,
+        "description": "Setting trends with high-quality fashion.",
+        "brand_logo": "https://i.ibb.co.com/zbHtWmf/Trend-setters.jpg",
+        "coupons": [
+          {
+            "coupon_code": "TREND10",
+            "discount": "10% off on your next purchase",
+            "expiry_date": "2024-12-31",
+            "condition": "Valid for all users",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://shoptrendsetters.com/?srsltid=AfmBOorBaxcOZSdN7DDMp5vYT4_DWQXrrjbr-irfT9qzhyBS93MqjlMV",
+        "category": "Fashion",
+        "isSaleOn": false
+      },
+      
+      {
+        "_id": "9",
+        "brand_name": "RunwayReady",
+        "rating": 4.3,
+        "description": "Get the runway look at everyday prices.",
+        "brand_logo": "https://i.ibb.co.com/Y7mh4cx/runway-ready.jpg",
+        "coupons": [
+          {
+            "coupon_code": "RUNWAY5",
+            "discount": "5% off sitewide",
+            "expiry_date": "2024-11-30",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://runwayready.co.za/",
+        "category": "Fashion",
+        "isSaleOn": true
+      },
+      
+      {
+        "_id": "10",
+        "brand_name": "DapperDenim",
+        "rating": 4.1,
+        "description": "Your one-stop shop for premium denim.",
+        "brand_logo": "https://i.ibb.co.com/vHnQwML/Dapper-denim.jpg",
+        "coupons": [
+          {
+            "coupon_code": "DENIM20",
+            "discount": "20% off on denim collection",
+            "expiry_date": "2025-01-15",
+            "condition": "Valid on denim items only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://dapperclub.com/collections/jeans",
+        "category": "Fashion",
+        "isSaleOn": false
+      },
+    
+      {
+        "_id": "11",
+        "brand_name": "EleganceNow",
+        "rating": 4.9,
+        "description": "Elegant designs for every occasion.",
+        "brand_logo": "https://i.ibb.co.com/NS6HjL9/elegence-now.jpg",
+        "coupons": [
+          {
+            "coupon_code": "ELEGANT15",
+            "discount": "15% off on party wear",
+            "expiry_date": "2025-02-28",
+            "condition": "Valid on party wear items only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://elegance.com.bd/",
+        "category": "Fashion",
+        "isSaleOn": true
+      },
+      
+      {
+        "_id": "12",
+        "brand_name": "ClassyThreads",
+        "rating": 4.5,
+        "description": "Stylish threads for the modern wardrobe.",
+        "brand_logo": "https://i.ibb.co.com/Q6p0hG3/Classy-threads.jpg",
+        "coupons": [
+          {
+            "coupon_code": "CLASSY30",
+            "discount": "30% off on all orders above $100",
+            "expiry_date": "2024-12-20",
+            "condition": "Minimum order value $100",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://classythreads.com/",
+        "category": "Fashion",
+        "isSaleOn": false
+      },
+      {
+      "_id": "13",
+      "brand_name": "GroceryHub",
+      "rating": 4.6,
+      "description": "Fresh groceries delivered to your doorstep.",
+      "brand_logo": "https://i.ibb.co.com/cX0SVHH/Grocery-hub.jpg",
+      "coupons": [
+        {
+          "coupon_code": "FRESH20",
+          "discount": "20% off on fruits and vegetables",
+          "expiry_date": "2025-01-10",
+          "condition": "Minimum purchase of $30",
+          "coupon_type": "percentage"
+        }
+      ],
+      "shop_link": "https://groceryhub.nl/?srsltid=AfmBOorJtDUHfGxaV_a-95ksh1cXcEKYGK2Rh04RBQ7fdXY-h2cFAdxC",
+      "category": "Groceries",
+      "isSaleOn": true
+    },
+    {
+        "_id": "14",
+        "brand_name": "FreshMart",
+        "rating": 4.7,
+        "description": "Fresh produce and groceries delivered to your doorstep.",
+        "brand_logo": "https://i.ibb.co.com/59bK1Xn/fresh-mart.jpg",
+        "coupons": [
+          {
+            "coupon_code": "FRESH5",
+            "discount": "5% off on all orders",
+            "expiry_date": "2024-12-31",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.freshmart.ca/",
+        "category": "Grocery",
+        "isSaleOn": true
+      },
+      {
+        "_id": "15",
+        "brand_name": "GreenBasket",
+        "rating": 4.6,
+        "description": "Organic groceries for a healthy lifestyle.",
+        "brand_logo": "https://i.ibb.co.com/jDrVXVz/green-basket.jpg",
+        "coupons": [
+          {
+            "coupon_code": "GREEN10",
+            "discount": "10% off on organic products",
+            "expiry_date": "2024-12-20",
+            "condition": "Applicable only to organic items",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://greenbasket.ch/",
+        "category": "Grocery",
+        "isSaleOn": false
+      },
+      {
+        "_id": "16",
+        "brand_name": "DailyNeeds",
+        "rating": 4.3,
+        "description": "Affordable groceries for everyday needs.",
+        "brand_logo": "https://i.ibb.co.com/Bg1XJ1r/daily-needs.jpg",
+        "coupons": [
+          {
+            "coupon_code": "NEEDS15",
+            "discount": "15% off on all orders above $50",
+            "expiry_date": "2025-02-28",
+            "condition": "Minimum order value $50",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.dailyneedsbd.com/?srsltid=AfmBOorVcOtUKperhJKjxv1PYDYBLQEmWdg8cjcySv7FzBuzfp4vNo9R",
+        "category": "Grocery",
+        "isSaleOn": false
+      },
+      {
+        "_id": "17",
+        "brand_name": "FarmFresh",
+        "rating": 4.8,
+        "description": "Freshly sourced fruits and vegetables.",
+        "brand_logo": "https://i.ibb.co.com/RByt5Kw/farm-fresh.jpg",
+        "coupons": [
+          {
+            "coupon_code": "FARM25",
+            "discount": "25% off on farm products",
+            "expiry_date": "2025-01-10",
+            "condition": "Valid on fruits and vegetables only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://farmfreshorganics.com.bd/",
+        "category": "Grocery",
+        "isSaleOn": true
+      },
+      {
+        "_id": "18",
+        "brand_name": "HealthyHarvest",
+        "rating": 4.5,
+        "description": "Wholesome groceries for a better you.",
+        "brand_logo": "https://i.ibb.co.com/F0qqJC0/healthy-harvest.jpg",
+        "coupons": [
+          {
+            "coupon_code": "HARVEST10",
+            "discount": "10% off on health food products",
+            "expiry_date": "2024-12-31",
+            "condition": "Applicable only to health food items",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.healthyharvests.com/",
+        "category": "Grocery",
+        "isSaleOn": false
+      },
+      {
+        "_id": "19",
+        "brand_name": "BudgetPantry",
+        "rating": 4.2,
+        "description": "Quality groceries at budget-friendly prices.",
+        "brand_logo": "https://i.ibb.co.com/dKbh1jC/budget-pentry.jpg",
+        "coupons": [
+          {
+            "coupon_code": "BUDGET5",
+            "discount": "5% off sitewide",
+            "expiry_date": "2024-11-30",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.budgetpantry.com/",
+        "category": "Grocery",
+        "isSaleOn": true
+      },
+      {
+        "_id": "20",
+        "brand_name": "TechHive",
+        "rating": 4.6,
+        "description": "Latest gadgets and electronics at your fingertips.",
+        "brand_logo": "https://i.ibb.co.com/QJrDbHg/tech-hive.jpg",
+        "coupons": [
+          {
+            "coupon_code": "TECH10",
+            "discount": "10% off on all electronics",
+            "expiry_date": "2024-12-31",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.techhive.com/",
+        "category": "Electronics",
+        "isSaleOn": true
+      },
+      {
+      "_id": "21",
+      "brand_name": "TechGear",
+      "rating": 4.8,
+      "description": "Premium gadgets and accessories.",
+      "brand_logo": "https://i.ibb.co.com/6wyBy56/tech-gear.jpg",
+      "coupons": [
+        {
+          "coupon_code": "GEARUP",
+          "discount": "15% off on all gadgets",
+          "expiry_date": "2024-12-15",
+          "condition": "Valid sitewide",
+          "coupon_type": "percentage"
+        }
+      ],
+      "shop_link": "https://www.techgearbd.com/",
+      "category": "Electronics",
+      "isSaleOn": false
+    },
+    {
+        "_id": "22",
+        "brand_name": "GadgetGalaxy",
+        "rating": 4.5,
+        "description": "Your destination for top-notch gadgets.",
+        "brand_logo": "https://i.ibb.co.com/YN2L18M/gadget-galaxy.jpg",
+        "coupons": [
+          {
+            "coupon_code": "GALAXY15",
+            "discount": "15% off on all smartphones",
+            "expiry_date": "2025-01-15",
+            "condition": "Valid on smartphones only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.gadgetgalaxygems.com/",
+        "category": "Electronics",
+        "isSaleOn": false
+      },
+      
+      {
+        "_id": "23",
+        "brand_name": "PowerTech",
+        "rating": 4.7,
+        "description": "Affordable and reliable electronics for everyone.",
+        "brand_logo": "https://i.ibb.co.com/kqvXSKX/power-tech.jpg",
+        "coupons": [
+          {
+            "coupon_code": "POWER20",
+            "discount": "20% off on accessories",
+            "expiry_date": "2024-12-20",
+            "condition": "Applicable to accessories only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.powertechbd.com/",
+        "category": "Electronics",
+        "isSaleOn": true
+      },
+      
+      
+      
+    {
+      "_id": "24",
+      "brand_name": "BeautyPlus",
+      "rating": 4.4,
+      "description": "Top beauty products for less.",
+      "brand_logo": "https://i.ibb.co.com/mt7GZkj/beauty-plus.jpg",
+      "coupons": [
+        {
+          "coupon_code": "GLOWUP",
+          "discount": "25% off on skincare",
+          "expiry_date": "2024-12-20",
+          "condition": "Minimum purchase of $50",
+          "coupon_type": "percentage"
+        }
+      ],
+      "shop_link": "https://beauty-plus.co.uk/",
+      "category": "Beauty",
+      "isSaleOn": false
+    },
+    {
+        "_id": "25",
+        "brand_name": "GlowStore",
+        "rating": 4.7,
+        "description": "Beauty essentials for a radiant glow.",
+        "brand_logo": "https://i.ibb.co.com/CzmZspt/glow-store.jpg",
+        "coupons": [
+          {
+            "coupon_code": "GLOW15",
+            "discount": "15% off on skincare products",
+            "expiry_date": "2024-12-31",
+            "condition": "Applicable only on skincare items",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.glowstore.com.au/?srsltid=AfmBOoqKx9v_NKv13pr77BT37j_LYx8mrI6TjId7Wr_-IeHuoJnNYKC_",
+        "category": "Beauty",
+        "isSaleOn": true
+      },
+      {
+        "_id": "26",
+        "brand_name": "BeautyBasics",
+        "rating": 4.5,
+        "description": "Affordable beauty products for everyday use.",
+        "brand_logo": "https://i.ibb.co.com/dWLtdp7/beauty-basics.jpg",
+        "coupons": [
+          {
+            "coupon_code": "BASIC10",
+            "discount": "10% off on all orders",
+            "expiry_date": "2025-01-15",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.beautybasicsusa.com/?srsltid=AfmBOor9oPGnoTdnmqYnKZqpTvVnyGOaui-bkLPQpz7OF_kqtABNZku7",
+        "category": "Beauty",
+        "isSaleOn": false
+      },
+      {
+        "_id": "27",
+        "brand_name": "LuxeLook",
+        "rating": 4.8,
+        "description": "Premium beauty products for a luxurious look.",
+        "brand_logo": "https://i.ibb.co.com/Br9ftcx/luxe-look.jpg",
+        "coupons": [
+          {
+            "coupon_code": "LUXE20",
+            "discount": "20% off on all luxury brands",
+            "expiry_date": "2024-12-20",
+            "condition": "Applicable to luxury brands only",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://www.luxelook.com.au/",
+        "category": "Beauty",
+        "isSaleOn": true
+      },
+      {
+        "_id": "28",
+        "brand_name": "CharmCart",
+        "rating": 4.3,
+        "description": "Your one-stop shop for charming beauty products.",
+        "brand_logo": "https://i.ibb.co.com/Ldrvs0L/charm-chart.jpg",
+        "coupons": [
+          {
+            "coupon_code": "CHARM5",
+            "discount": "5% off on all orders",
+            "expiry_date": "2024-11-30",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+          }
+        ],
+        "shop_link": "https://charm-cart.com/",
+        "category": "Beauty",
+        "isSaleOn": false
+      },
+      
+      
+      
+        {
+          "_id": "29",
+          "brand_name": "KidsJoy",
+          "rating": 4.7,
+          "description": "Toys and games for kids of all ages.",
+          "brand_logo": "https://i.ibb.co.com/2kDv4jK/kids-joy.jpg",
+          "coupons": [
+            {
+              "coupon_code": "PLAY10",
+              "discount": "10% off on toys",
+              "expiry_date": "2025-01-10",
+              "condition": "Minimum purchase of $20",
+              "coupon_type": "percentage"
+            }
+          ],
+          "shop_link": "https://kidsjoy.lk/",
+          "category": "Kids",
+          "isSaleOn": false
+        },
+        
+        {
+          "_id": "30",
+          "brand_name": "BabyStore",
+          "rating": 4.6,
+          "description": "Baby products and essentials.",
+          "brand_logo": "https://i.ibb.co.com/RNSp3Th/baby-store.jpg",
+          "coupons": [
+            {
+              "coupon_code": "BABY10",
+              "discount": "10% off on baby care products",
+              "expiry_date": "2025-02-28",
+              "condition": "No minimum purchase required",
+              "coupon_type": "percentage"
+            }
+          ],"shop_link": "https://www.babyshoppers.com.bd/",
+          "category": "Kids",
+          "isSaleOn": false
+        }
+        
+          
+  ]
+  
