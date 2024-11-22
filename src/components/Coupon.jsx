@@ -7,7 +7,7 @@ const Coupon = ({ coupon }) => {
     const { coupon_code, expiry_date, condition,discount } = coupons[0];
 
     return (
-        <div className="border rounded-lg shadow-lg p-4 w-72 bg-white">
+        <div className="border rounded-lg shadow-lg p-4 w-72 bg-white mb-10">
             {/* Background Image */}
             <div
                 className="relative w-full h-40 bg-cover bg-center rounded-md overflow-hidden"

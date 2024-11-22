@@ -7,7 +7,7 @@ import Coupons from "./Coupons";
 
 const Home = () => {
     return (
-        <div>
+        <div >
             
             <Banner></Banner>
            

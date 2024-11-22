@@ -5,18 +5,20 @@ import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user,logOut } = useContext(AuthContext);
 
   const links = (
     <>
       <li><NavLink className="font-medium text-xl text-teal-800" to="/">Home</NavLink></li>
       <li><NavLink className="font-medium text-xl text-teal-800" to="/brand">Brand</NavLink></li>
-      <li><NavLink className="font-medium text-xl text-teal-800" to="/about">About</NavLink></li>
+      <li><NavLink className="font-medium text-xl text-teal-800" to="/my-profile">My Profile</NavLink></li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 md:max-w-6xl mx-auto">
+    <div className='md:max-w-6xl mx-auto'>
+    <div className="navbar ">
+    
       {/* Logo and App Name */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -50,26 +52,17 @@ const Navbar = () => {
           {links}
         </ul>
       </div>
+     
 
       {/* User Authentication Section */}
       <div className="navbar-end flex items-center space-x-4">
-        {user ? (
-          <>
-            {/* Display User Name and Email */}
-            <div className="text-lg text-teal-800">
-              Welcome, {user.name} ({user.email})
-            </div>
-            <button className="btn btn-outline" onClick={() => alert("Log-Out functionality")}>
-              Log-Out
-            </button>
-          </>
-        ) : (
-          <>
-            <NavLink to="/auth/login" className="btn">Login</NavLink>
-            <NavLink to="/auth/register" className="btn">Register</NavLink>
-          </>
-        )}
-      </div>
+       {
+        user && user?.email ? (<button onClick={logOut} className="btn">Log Out</button>):(<NavLink to="/auth/login" className="btn">Login</NavLink>)
+       }   
+            
+          </div>
+    </div>
+    <div className='text-3xl font-semibold'>{user && user.email}</div>
     </div>
   );
 };
