@@ -12,7 +12,7 @@ const {userLogin,setUser} = useContext(AuthContext);
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({name,email,password});
+    // console.log({name,email,password});
     userLogin(email,password)
     .then(result=>{
       const user =result.user;
