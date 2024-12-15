@@ -12,5 +12,20 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "headers": [
+  {
+    "source": "**/*.@(json|js|css|html)",
+    "headers": [
+      {
+        "key": "Cache-Control",
+        "value": "no-cache, no-store, must-revalidate"
+      }
+    ]
   }
+]
+
+
 }
+
+

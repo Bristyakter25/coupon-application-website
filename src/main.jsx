@@ -16,6 +16,7 @@ import AuthProvider from './provider/AuthProvider';
 import Home from './components/Home';
 import MyProfile from './components/MyProfile';
 import ErrorPage from './components/ErrorPage';
+import CouponDetails from './components/CouponDetails';
 
 
 
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>
+      },
+      {
+        path:'/couponDetails/:id',
+        element:<CouponDetails></CouponDetails>
       }
       
     ]

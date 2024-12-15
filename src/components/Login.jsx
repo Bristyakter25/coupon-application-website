@@ -1,10 +1,14 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
+import SocialLogin from "./SocialLogin";
 
 
 const Login = () => {
 const {userLogin,setUser} = useContext(AuthContext);
+const navigate = useNavigate();
+const [error, setError] = useState();
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -12,14 +16,39 @@ const {userLogin,setUser} = useContext(AuthContext);
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    // console.log({name,email,password});
+
+    if (!/[A-Z]/.test(password)) {
+      setError("Password must contain at least one uppercase letter.");
+      return;
+    }
+
+    if (!/[a-z]/.test(password)) {
+      setError("Password must contain at least one lowercase letter.");
+      return;
+    }
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long.");
+      return;
+    }
+
+    setError();
+    
+    console.log({name,email,password});
     userLogin(email,password)
     .then(result=>{
       const user =result.user;
       setUser(user);
+      navigate("/"); 
     })
     .catch((error)=>{
-      alert(error.code);
+      
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+       
+      });
     })
 
   }
@@ -48,15 +77,15 @@ const {userLogin,setUser} = useContext(AuthContext);
               <span className="label-text font-bold">Password</span>
             </label>
             <input name="password" type="password" placeholder="Enter your password" className="input input-bordered" required />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-            </label>
+            
           </div>
+          {error && <p className="text-red-500 font-semibold mt-2">{error}</p>}
           <div className="form-control mt-6">
           <button className="btn btn-neutral rounded-[5px]">Login</button>
         </div>
         </form>
         <p className="text-center font-semibold">Dont’t Have An Account ? <Link to="/auth/register" className="text-red-500">Register</Link></p>
+        <SocialLogin></SocialLogin>
 
       </div>
       </div>

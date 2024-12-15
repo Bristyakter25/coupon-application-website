@@ -1,10 +1,8 @@
-
+import { NavLink } from "react-router-dom";
 
 const Coupon = ({ coupon }) => {
-    const { brand_name, description, brand_logo, coupons } = coupon;
-
-    
-    const { coupon_code, expiry_date, condition,discount } = coupons[0];
+    const { _id, brand_name, description, brand_logo, coupons } = coupon;
+    const { coupon_code, expiry_date, condition, discount } = coupons[0];
 
     return (
         <div className="border rounded-lg shadow-lg p-4 w-72 bg-white mb-10">
@@ -24,13 +22,16 @@ const Coupon = ({ coupon }) => {
                 <h2 className="text-lg font-bold mb-2">{brand_name}</h2>
                 <p className="text-sm text-gray-600 mb-2">{description}</p>
                 <p>{coupon_code}</p>
-              
                 <p className="text-xs text-gray-500 mb-1">
                     <strong>Expires: </strong>{expiry_date}
                 </p>
                 <p className="text-xs text-gray-500">
                     <strong>Condition: </strong>{condition}
                 </p>
+                {/* Pass _id in the URL */}
+                <NavLink to={`/couponDetails/${_id}`}>
+                    <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg">Details</button>
+                </NavLink>
             </div>
         </div>
     );
