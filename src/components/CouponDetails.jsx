@@ -1,35 +1,79 @@
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams, useNavigate } from "react-router-dom";
+import { useContext, useEffect,} from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import CopyToClipboard from "react-copy-to-clipboard";
+import Swal from "sweetalert2";
 
-const CouponDetails = ({ data }) => {
-    const { id } = useParams(); // Extract the _id from the URL
 
-    // Find the coupon in your data using the id
-    const coupon = data.find((item) => item._id === id);
 
-    if (!coupon) {
-        return <p>Coupon not found.</p>;
+const CouponDetails = ({}) => {
+  const { id } = useParams();
+  const data = useLoaderData();
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext); 
+  
+
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/auth/login", { state: { from: `/couponDetails/${id}` } });
     }
+  }, [user, navigate, id]);
 
-    const { brand_name, description, brand_logo, coupons } = coupon;
-    const { coupon_code, expiry_date, condition, discount } = coupons[0];
+  const handleCopy = () => {
+    Swal.fire({
+        title: "Good job!",
+        text: "You Successfully Copied the Code!",
+        icon: "success"
+      });
+  };
 
-    return (
-        <div className="container mx-auto mt-10">
-            <div className="border rounded-lg shadow-lg p-6 max-w-md mx-auto bg-white">
-                <img src={brand_logo} alt={brand_name} className="w-full rounded-lg mb-4" />
-                <h1 className="text-2xl font-bold mb-2">{brand_name}</h1>
-                <p className="text-sm text-gray-600 mb-2">{description}</p>
-                <p className="text-lg text-green-500 font-bold">{discount}</p>
-                <p className="text-xs text-gray-500 mb-1">
-                    <strong>Expires: </strong>{expiry_date}
-                </p>
-                <p className="text-xs text-gray-500">
-                    <strong>Condition: </strong>{condition}
-                </p>
-                <p className="text-sm font-semibold mt-4">Coupon Code: {coupon_code}</p>
-            </div>
+
+  const coupon = data.find((coupon) => coupon._id === id);
+
+  
+
+ 
+  const { brand_name, description,brand_logo,shop_link,coupons, } = coupon;
+  const {coupon_code} = coupons[0]
+ 
+  return (
+    <div className="card bg-teal-100 w-96 shadow-xl my-5 mx-auto p-4">
+  <figure>
+    <img
+      src={brand_logo}
+      alt="Brands"  className=" rounded-2xl "/>
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">{brand_name}</h2>
+    <p>{description}</p>
+    <p></p>
+   
+   <div className="rating">
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" defaultChecked />
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" defaultChecked />
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" defaultChecked />
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
+</div>
+
+<div className="my-4">
+          <span className="font-mono bg-gray-200 px-4 py-2 rounded-lg text-lg">
+            {coupon_code}
+          </span>
+          <CopyToClipboard text={coupon_code} onCopy={handleCopy}>
+            <button className="ml-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+              Copy Code
+            </button>
+          </CopyToClipboard>
         </div>
-    );
+  
+    <div className="card-actions justify-end">
+      <a href={shop_link} className="btn glass bg-sky-300">Use Now!</a>
+    </div>
+  </div>
+</div>
+  );
 };
 
 export default CouponDetails;

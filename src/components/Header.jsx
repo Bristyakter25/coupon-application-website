@@ -13,7 +13,7 @@ const {user} = useContext(AuthContext);
             Welcome, {user.email.split("@")[0]}!
           </h1>
         ) : (
-          <h1 className="text-xl font-semibold text-center">Welcome to Our Website!</h1>
+          <h1 className="text-xl font-semibold text-center">Welcome to Discount PRO!</h1>
         )}
             </div>
             
