@@ -32,8 +32,8 @@ const Coupons = () => {
         Brands on Sale
       </h2>
 
-      <div className="flex gap-14 my-5">
-        <div className="bg-[#FFFFFF] p-5 w-[200px] h-[450px] border border-[#09080F1A]">
+      <div className="lg:flex gap-14 my-5 mx-auto">
+        <div className="bg-[#FFFFFF] p-5 w-[200px] mx-auto h-[450px] border border-[#09080F1A]">
           <ul
             onClick={() => setSelectedCategory("All Coupons")}
             className={`cursor-pointer bg-[#09080F0D] rounded-3xl mt-4 mb-6 text-center w-[150px] p-2 ${

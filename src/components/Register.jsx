@@ -4,13 +4,18 @@ import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "./SocialLogin";
 import {  updateProfile } from "firebase/auth";
-import app from "../firebase/firebase.config";
+
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa6";
 
 
 const Register = () => {
   const { createNewUser, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const [error, setError] = useState();
+  const [showPassword,setShowPassword] = useState(false);
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,26 +44,7 @@ const Register = () => {
 
     setError();
 
-    // update profile: photo and name
-    // const profile = {
-    //   displayName:name,
-    //   photoURL:photo
-    // }
-    // updateProfile(,profile)
-    // .then(()=>{
-    //   console.log('user profile updated')
-    // })
-    // .catch(error => {console.log('user profile update error')});
-
-
-
-    // createNewUser(email, password)
-    //   .then((result) => {
-    //     const user = result.user;
-    //     setUser(user);
-    //     navigate("/");
-    //   })
-
+    
     createNewUser(email, password)
        .then((result) => {
         const user = result.user;
@@ -70,10 +56,10 @@ const Register = () => {
     }).then(() => {
       console.log("User profile updated:", { displayName: name, photoURL: photo });
       
-      // Update the AuthContext with the updated user info
+      
       setUser({ ...user, displayName: name, photoURL: photo });
       
-      // Redirect to the home page or desired page
+      
       navigate("/");
     });
   })
@@ -131,18 +117,24 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text font-bold">Password</span>
             </label>
             <input
               name="password"
-              type="password"
+              type={showPassword ? 'text' :'password'}
               placeholder="Enter your password"
               className="input input-bordered"
               required
             />
+            <button onClick={() => setShowPassword(!showPassword)} className="btn btn-sm absolute right-2 top-11">
+          { 
+          showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+          }</button>
           </div>
+
+
           {error && <p className="text-red-500 font-semibold mt-2">{error}</p>}
           <div className="form-control mt-6">
             <button className="btn btn-neutral rounded-[5px]">Register</button>

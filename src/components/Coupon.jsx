@@ -5,7 +5,7 @@ const Coupon = ({ coupon }) => {
     const { discount } = coupons[0];
 
     return (
-        <div className="card bg-emerald-100 w-72 shadow-xl">
+        <div className="card bg-emerald-100 w-72 shadow-xl mx-auto my-5">
   <figure className="px-5 pt-5">
     <img
       src={brand_logo}
