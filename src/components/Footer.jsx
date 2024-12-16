@@ -1,20 +1,22 @@
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
     return (
+      <div className="my-5 ">
         <footer className="footer bg-gray-300 text-base-content p-10 ">
-  <nav className="max-w-7xl mx-auto">
+  <nav className="lg:max-w-7xl mx-auto w-[360px]">
     <h6 className="footer-title text-black font-bold text-2xl">Services</h6>
-    <a className="link link-hover text-black font-semibold text-xl">Branding</a>
-    <a className="link link-hover text-black font-semibold text-xl">Design</a>
+    <Link to='/brand'><a className="link link-hover text-black font-semibold text-xl">Branding</a></Link>
+    <Link to='/'><a className="link link-hover text-black font-semibold text-xl">Design</a></Link>
     <a className="link link-hover text-black font-semibold text-xl">Marketing</a>
     <a className="link link-hover text-black font-semibold text-xl">Advertisement</a>
   </nav>
   <nav>
     <h6 className="footer-title text-black font-bold text-2xl">Company</h6>
-    <a className="link link-hover text-black font-semibold text-xl">About us</a>
-    <a className="link link-hover text-black font-semibold text-xl">Contact</a>
-    <a className="link link-hover text-black font-semibold text-xl">Jobs</a>
+   <Link to='/my-profile'> <a className="link link-hover text-black font-semibold text-xl">My Profile</a></Link>
+    <Link to='/auth/login'><a className="link link-hover text-black font-semibold text-xl">Log In</a></Link>
+    <Link to='/auth/register'><a className="link link-hover text-black font-semibold text-xl">Registration</a></Link>
     <a className="link link-hover text-black font-semibold text-xl">Press kit</a>
   </nav>
   <nav>
@@ -53,9 +55,13 @@ const Footer = () => {
             d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
         </svg>
       </a>
+     
     </div>
   </nav>
+  
 </footer>
+<p className="bg-slate-600 text-white py-5  text-center font-semibold text-3xl">Copyright © {new Date().getFullYear()} - All right reserved</p>
+</div>
     );
 };
 

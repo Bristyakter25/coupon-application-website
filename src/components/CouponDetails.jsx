@@ -38,7 +38,9 @@ const CouponDetails = ({}) => {
   const {coupon_code,condition,expiry_date,discount} = coupons[0]
  
   return (
-    <div className="card bg-teal-100 w-[500px] shadow-xl my-5 mx-auto p-4">
+    <div>
+        <h2 className="text-center font-bold  text-2xl">Coupon Details</h2>
+    <div className="card bg-teal-100 lg:w-[500px] w-[400px] shadow-xl my-5 mx-auto p-4">
   <figure>
     <img
       src={brand_logo}
@@ -75,6 +77,7 @@ const CouponDetails = ({}) => {
       <a href={shop_link} className="btn glass bg-sky-300">Use Now!</a>
     </div>
   </div>
+</div>
 </div>
   );
 };
