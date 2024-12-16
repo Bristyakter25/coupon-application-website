@@ -3,6 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "./SocialLogin";
+import {  updateProfile } from "firebase/auth";
+import app from "../firebase/firebase.config";
+
 
 const Register = () => {
   const { createNewUser, setUser } = useContext(AuthContext);
@@ -36,12 +39,46 @@ const Register = () => {
 
     setError();
 
+    // update profile: photo and name
+    // const profile = {
+    //   displayName:name,
+    //   photoURL:photo
+    // }
+    // updateProfile(,profile)
+    // .then(()=>{
+    //   console.log('user profile updated')
+    // })
+    // .catch(error => {console.log('user profile update error')});
+
+
+
+    // createNewUser(email, password)
+    //   .then((result) => {
+    //     const user = result.user;
+    //     setUser(user);
+    //     navigate("/");
+    //   })
+
     createNewUser(email, password)
-      .then((result) => {
+       .then((result) => {
         const user = result.user;
-        setUser(user);
-        navigate("/");
-      })
+
+    // Update the user's display name and photo URL
+    return updateProfile(user, {
+      displayName: name,
+      photoURL: photo,
+    }).then(() => {
+      console.log("User profile updated:", { displayName: name, photoURL: photo });
+      
+      // Update the AuthContext with the updated user info
+      setUser({ ...user, displayName: name, photoURL: photo });
+      
+      // Redirect to the home page or desired page
+      navigate("/");
+    });
+  })
+
+      
       .catch((error) => {
         Swal.fire({
           icon: "error",

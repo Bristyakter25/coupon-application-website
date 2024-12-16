@@ -86,7 +86,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="text-3xl font-semibold">{user && user.email}</div>
+      <div className="text-3xl font-semibold flex justify-end mb-5">{user && user.email}</div>
     </div>
   );
 };

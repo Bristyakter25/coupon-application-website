@@ -4,7 +4,7 @@ import pic3 from "../assets/save money.jpg";
 
 const Cards = () => {
   return (
-    <div className="grid grid-cols-3 border-4 gap-2 my-5">
+    <div className="grid grid-cols-3 border-4 gap-2 my-10 mt-20">
       <div className="hero bg-base-200 ">
         <div className="hero-content flex-col lg:flex-row ">
           <img
